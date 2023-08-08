@@ -46,7 +46,7 @@ public class testController {
     }
 
     // 수정 - update - update
-    @PostMapping("/update/{id}")
+    @PostMapping("/update")
     public String update(myUserDTO dto) {
         service.update(dto);
         return "redirect:/list";
