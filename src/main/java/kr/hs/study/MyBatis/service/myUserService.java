@@ -13,4 +13,6 @@ public interface myUserService {
     // select
     public List<myUserDTO> listAll();
 
+    // update - read
+    public myUserDTO read(String id);
 }

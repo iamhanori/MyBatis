@@ -12,5 +12,10 @@
     <select id="listAll" resultType="kr.hs.study.MyBatis.dto.myUserDTO">
         select * from myuser
     </select>
+
+    <select id="read" resultType="kr.hs.study.MyBatis.dto.myUserDTO">
+        select * from myuser where id = #{id}
+    </select>
+
 </mapper>
 

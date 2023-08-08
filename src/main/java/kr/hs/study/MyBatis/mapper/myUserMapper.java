@@ -7,8 +7,12 @@ import java.util.List;
 
 @Mapper
 public interface myUserMapper {
+    // insert (add)
     public void insert(myUserDTO dto);
 
+    // select (list)
     public List<myUserDTO> listAll();
 
+    // update read
+    public myUserDTO read(String id);
 }

@@ -19,4 +19,9 @@ public class myUserServiceImpl implements myUserService{
     public List<myUserDTO> listAll() {
         return mapper.listAll();
     }
+
+    @Override
+    public myUserDTO read(String id) {
+        return mapper.read(id);
+    }
 }
