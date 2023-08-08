@@ -17,5 +17,12 @@
         select * from myuser where id = #{id}
     </select>
 
+    <update id="update" parameterType="kr.hs.study.MyBatis.dto.myUserDTO">
+        update myuser set name = #{name} where id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="kr.hs.study.MyBatis.dto.myUserDTO">
+        delete from myuser where id = #{id}
+    </delete>
 </mapper>
 

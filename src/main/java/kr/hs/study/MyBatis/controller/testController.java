@@ -37,11 +37,26 @@ public class testController {
         return "list";
     }
 
+    // 수정 - update - read
     @GetMapping("/update/{id}")
     public String read(@PathVariable("id") String id, Model model) {
         myUserDTO dto = service.read(id);
         model.addAttribute("dto", dto);
         return "read";
+    }
+
+    // 수정 - update - update
+    @PostMapping("/update/{id}")
+    public String update(myUserDTO dto) {
+        service.update(dto);
+        return "redirect:/list";
+    }
+
+    // 삭제 delete
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable("id") String id) {
+        service.delete(id);
+        return "redirect:/list";
     }
 
 }

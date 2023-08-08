@@ -15,4 +15,10 @@ public interface myUserMapper {
 
     // update read
     public myUserDTO read(String id);
+
+    // update update
+    public void update(myUserDTO dto);
+
+    // delete
+    public void delete(String id);
 }
